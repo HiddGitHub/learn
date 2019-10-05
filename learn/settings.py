@@ -78,6 +78,7 @@ WSGI_APPLICATION = 'learn.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
+         'NAME':'learn',
          'USER': 'root',
          'PASSWORD': '1213',
          'HOST': '127.0.0.1',
