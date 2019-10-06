@@ -12,3 +12,7 @@ def login(request):
 #注册函数
 def register(request):
     return render(request,'users/register.html')
+
+#修改密码函数
+def forget(request):
+    return render(request,'users/forget.html')

@@ -16,12 +16,16 @@
 <!--导航条-->
 <div class="fly-header layui-bg-black">
     <div class="layui-container">
-        <a class="fly-logo" href='/'>
-            <img src="{% static 'images/logo.png' %}" style="height: 50px;height:50px ">
-        </a>
+        <ul class="layui-nav">
+            <li class="layui-nav-item layui-col-xs1"><a href="" style="font-size: 16px">主页</a></li>
+            <li class="layui-nav-item layui-col-xs1"><a href="" style="font-size: 16px">新闻</a></li>
+            <li class="layui-nav-item layui-col-xs1"><a href="" style="font-size: 16px">练习</a></li>
+            <li class="layui-nav-item layui-col-xs1"><a href="" style="font-size: 16px">评论</a></li>
+            <li class="layui-nav-item layui-col-xs1"><a href="" style="font-size: 16px">反馈</a></li>
+
+        </ul>
 
         <ul class="layui-nav fly-nav-user">
-
             <!-- 未登录的状态 -->
             <li class="layui-nav-item">
                 <a class="iconfont icon-touxiang layui-hide-xs" href="{% url 'login' %}"></a>
@@ -36,8 +40,11 @@
         </ul>
     </div>
 </div>
-
-{% block container %}{% endblock %}
-{% block footer %}{% endblock %}
+<div class="layui-container fly-marginTop">
+    <div class="fly-panel fly-panel-user" pad20>
+        {% block container %}{% endblock %}
+        {% block footer %}{% endblock %}
+    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block title %} index {% endblock %}
+
+
+{% block container %}
+
+    <div class="layui-form layui-tab-content" style="padding: 20px 0;">
+        <div class="layui-tab-item layui-show">
+
+
+            <div class="layui-form layui-form-pane">
+                <form method="post">
+                    <div class="layui-form-item">
+                        <label  class="layui-form-label">邮箱</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="email"
+                            autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label  class="layui-form-label">验证码</label>
+                        <div class="layui-input-inline">
+                            <input type="text"
+                                   placeholder="输入答案" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">
+                            <span style="color: #c00;">{{ d.vercode }}</span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <button class="layui-btn" type="submit">提交</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}
